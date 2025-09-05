@@ -4,7 +4,7 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 import { StartDB } from "./src/config/database.js";
 
-// Rutas
+//-------------Rutas---------------//
 import authRoutes from "./src/routes/auth.routes.js";
 import usersRoutes from "./src/routes/users.routes.js";
 import articlesRoutes from "./src/routes/articles.routes.js";
@@ -19,7 +19,6 @@ app.use(cors({ origin: true, credentials: true }));
 app.use(express.json());
 app.use(cookieParser());
 
-//-----------------Rutas------------------//
 app.use("/api/auth", authRoutes);
 app.use("/api/users", usersRoutes);
 app.use("/api/articles", articlesRoutes);

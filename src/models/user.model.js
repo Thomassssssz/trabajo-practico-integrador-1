@@ -12,18 +12,16 @@ export const UserModel = sequelize.define(
       type: DataTypes.STRING(20),
       allowNull: false,
       unique: true,
-      // sin validate aquí (lo haces con express-validator)
     },
 
     email: {
       type: DataTypes.STRING(100),
       allowNull: false,
       unique: true,
-      // sin validate aquí
     },
 
     password: {
-      type: DataTypes.STRING(255), // guardás el hash de bcrypt
+      type: DataTypes.STRING(255),
       allowNull: false,
     },
 
@@ -36,8 +34,8 @@ export const UserModel = sequelize.define(
   {
     tableName: "users",
     freezeTableName: true,
-    timestamps: true, // created_at / updated_at
-    underscored: true, // snake_case
-    paranoid: true, // deleted_at (soft delete)
+    timestamps: true,
+    underscored: true,
+    paranoid: true,
   }
 );
